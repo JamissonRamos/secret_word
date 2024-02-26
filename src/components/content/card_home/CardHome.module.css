@@ -1,0 +1,49 @@
+
+
+.content
+{
+    /* border: 1px solid red; */
+
+    width: 315px;
+    height: 335px;
+
+    position: absolute;
+    left: calc(50% - 315px/2 - 0.5px);
+    top: 93px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    padding: 0px 2em;
+
+    background: var(--azul_700);
+    box-shadow: var(--box_600);
+
+}
+
+.text
+{
+    /* border: 1px solid red; */
+
+    padding: 0.2em 0;
+
+    font-size: 1em;
+    text-align: center;
+    line-height: 21px;
+
+    color: var(--verde_800);
+
+}
+
+.box_button
+{
+    /* border: 1px solid red; */
+
+    width: 70%;
+    height: 42px;
+}
+
+
