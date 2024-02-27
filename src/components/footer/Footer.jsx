@@ -18,9 +18,9 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.list_social}>
-                    <FaInstagram />
-                    <FaGithub />
-                    <MdOutlineMailOutline />
+                    <FaInstagram className={styles.icone}/>
+                    <FaGithub className={styles.icone}/>
+                    <MdOutlineMailOutline className={styles.icone}/>
                 </div>
 
             </div>
