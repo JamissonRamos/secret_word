@@ -1,10 +1,11 @@
 
-import './App.css'
-import CardHome from './components/content/card_home/CardHome'
-import Footer from './components/footer/Footer'
-
 //Components
+import StartScreen from './components/content/start_screen/StartScreen'
+import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
+
+//Css
+import './App.css'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
 
       <Header />
 
-      <CardHome />
+      <StartScreen />
 
       <Footer />
 

@@ -2,9 +2,9 @@
 import ButtonPrimary from "../../button/button/ButtonPrimary"
 
 //Css
-import styles  from "./CardHome.module.css"
+import styles  from "./StartScreen.module.css"
 
-const CardHome = () => {
+const StartScreen = () => {
 
     return (
 
@@ -23,4 +23,4 @@ const CardHome = () => {
     )
 }
 
-export default CardHome
+export default StartScreen
