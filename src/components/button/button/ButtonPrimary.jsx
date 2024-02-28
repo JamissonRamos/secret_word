@@ -1,11 +1,11 @@
 
 import styles from "./ButtonPrimary.module.css"
 
-const ButtonPrimary = ({name, value}) => {
+const ButtonPrimary = ({name, value, onclick}) => {
     
     return (
         <>
-            <button className={styles.button} name={name}> { value } </button>
+            <button className={styles.button} name={name} onClick={onclick}> { value }  </button>
         </>
     )
 }

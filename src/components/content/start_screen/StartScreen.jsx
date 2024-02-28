@@ -4,7 +4,7 @@ import ButtonPrimary from "../../button/button/ButtonPrimary"
 //Css
 import styles  from "./StartScreen.module.css"
 
-const StartScreen = () => {
+const StartScreen = ({startGamer}) => {
 
     return (
 
@@ -16,7 +16,7 @@ const StartScreen = () => {
                 </div>
 
                 <div className={styles.box_button}>
-                    <ButtonPrimary name="btnInstalJogo" value="Começar o Jogo" />
+                    <ButtonPrimary name="btnInstalJogo" value="Começar o Jogo" onclick={startGamer}/>
                 </div>
             </div>
         </>
