@@ -12,7 +12,7 @@ import StartScreen from './components/content/start_screen/StartScreen'
 import Gamer from './components/content/gamer/Gamer'
 import GamerOver from './components/content/gamer_over/GamerOver'
 import {wordList} from "./data/data"
-import { MdCategory } from 'react-icons/md'
+
 
 const stage = [
 
@@ -71,6 +71,13 @@ const startGamer = () => {
   setPickeWord(word) 
   setPickeCategory(novaCategory) 
   setPickeLetters(wordLetters)
+
+
+console.log(pickeCategory)
+
+console.log(pickeLetters)
+
+console.log(pickeWord)
 
   setGameStage(stage[1].name)
 
