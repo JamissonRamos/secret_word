@@ -1,23 +1,128 @@
-.content
+.gamer
 {
     /* border: 1px solid red; */
 
-    width: 315px;
-    height: 335px;
-
-    position: absolute;
-    left: calc(50% - 315px/2 - 0.5px);
-    top: 93px;
+    width: 100%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 30px;
 
-    padding: 0px 2em;
+    padding: 24px;
 
     background: var(--azul_700);
-    box-shadow: var(--box_600);
 
 }
+
+/* Indicar a pontuação e a dica da palavra */
+.points_category
+{
+    /* border: 1px solid red; */
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.points,
+.category
+{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wordContainer
+{
+    /* border: 1px solid red; */
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+
+    padding: 4px 0;
+
+    
+}
+
+.letter,
+.blankSquare
+{
+    width: 60px;
+    height: 54px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--branco_800);
+
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--azul_800);
+
+    box-shadow: var(--box_700);
+
+}
+
+.letterContainer
+{
+    /* border: 1px solid red; */
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+}
+
+.formLetters
+{
+    /* border: 1px solid red; */
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    padding: 8px 0;
+}
+
+.formLetters input
+{    
+    text-align: center;
+}
+
+.formLetters .box_button
+{
+    width: 24%;
+}
+
+.wrongLettersContainer
+{
+    /* border: 1px solid blue; */
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
