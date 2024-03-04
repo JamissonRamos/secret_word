@@ -158,6 +158,9 @@ useEffect(() => {
         pickeWord
       ])
 
+      setGuesses(guessesQtd) 
+
+
       //Resetar o jogo
       startGamer()
 

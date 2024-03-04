@@ -5,7 +5,7 @@
 3=> OK - Coloca metodo para não deixa repetir a palavra uma vez seleciona;
 4=> Uma palavra não pode ter mais de 35 caracteres dentro do modulo de phone;
 5=> OK - Mostra a palavra errada, ao fim do jogo;
-6=> Reiniciar as tentativas a cada palavra certa;
+6=> OK - Reiniciar as tentativas a cada palavra certa;
 
 
 
@@ -17,3 +17,5 @@ Documentação
 . Ao acerta a palavra a mesma é armazenada e ao fim do jogo o jogado pode visualizar quais palavras foram adivinhadas;
 
 . Ao fim do jogo a palavra que não foi adivinhada sera mostrada no final;
+
+. Ao acerta a palavra o valor das tentativas de acerto vai ser reiniciado, volta ao valor inicial;
