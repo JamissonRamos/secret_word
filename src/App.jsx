@@ -83,7 +83,6 @@ const startGamer = useCallback(() => {
   let wordLetters = word.split("")
   //Passando todas as letras para minusculas
 
-  // console.log(wordLetters)
   wordLetters = wordLetters.map((l) => l.toLowerCase())
 
   setPickeWord(word) 
@@ -97,7 +96,6 @@ const startGamer = useCallback(() => {
 //Processando  as letras na aplicação
 const verifyLatter = (letter) => {
 
-  console.log(letter)
   const normalizedLetter = letter.toLowerCase()
 
   //Verificando se a letra ja foi digitada
@@ -134,7 +132,6 @@ useEffect(() => {
 
     setGameStage(stage[2].name) // Pagina final, fim do jogo  
 
-    console.log(pickeWord)
   }
 
 },[guesses,pickeWord])
@@ -149,7 +146,7 @@ useEffect(() => {
     const uniqueLetters = [... new Set(cleanedString)]
 
     if( guessesLetters.length === uniqueLetters.length && guessesLetters.length >= 1){
-        console.log("Entrou")
+
       //aumentando a pontuação do usuário
       setScore((actualScore) =>( actualScore += 100))
 
@@ -179,7 +176,7 @@ const retry = () => {
   setGameStage(stage[0].name)
 }
 
-console.log(pickeWord)
+//console.log(pickeWord)
 
   return (
 
