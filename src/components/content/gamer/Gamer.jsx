@@ -2,8 +2,27 @@
 import ButtonPrimary from "../../button/button/ButtonPrimary"
 import styles from "./Gamer.module.css"
 import Title from "../../titles/title2/Title"
+import { useState, useRef } from "react"
 
-const Gamer = ({verifyLatter}) => {
+//pickeWord
+const Gamer = ({verifyLatter, pickeCategory, pickeLetters, guessesLetters, worongLetters, guesses, score}) => {
+  
+  const [letter, setLetter] = useState("")
+  const lettersInputRef  =  useRef(null)
+
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+
+    verifyLatter(letter)
+
+    setLetter("")
+    lettersInputRef.current.focus()
+
+    console.log(letter);
+
+  }
+
 
   return (
 
@@ -16,7 +35,7 @@ const Gamer = ({verifyLatter}) => {
 
           <Title text="Pontuação:" />
 
-          <span>0</span>
+          <span> {score} </span>
 
         </div>
 
@@ -24,20 +43,30 @@ const Gamer = ({verifyLatter}) => {
           
           <Title text="Dica da palavra:" />
 
-          <span>Jogo de Tabuleiro</span>
+          <span> {pickeCategory} </span>
 
         </div>
 
       </div>
       
       <div>
-        <Title text="Você tem 3 tentativas" />
+        {
+          guesses <= 1 ? (<Title text={`Você tem ${guesses}  tentativas`} />) : (<Title text={`Você tem ${guesses}  tentativas` } />)
+        }
+        
       </div>
       <div className={styles.wordContainer}>
-        <span className={styles.letter}>W</span>
-        <span className={styles.letter}>A</span>
-        <span className={styles.letter}>R</span>
-        <span className={styles.blankSquare}></span>
+
+        {
+          pickeLetters.map((l, i) => (
+
+            guessesLetters.includes(l) ? (<span key={i} className={styles.letter}> {l} </span>) : (<span key={i} className={styles.blankSquare}></span>)
+
+          ))
+        }
+       
+        
+        
   
       </div>
 
@@ -47,12 +76,13 @@ const Gamer = ({verifyLatter}) => {
           <Title text="Tenta advinha uma letra da palavra"/>
         </div>
 
-        <form className={styles.formLetters}>
+        <form onSubmit={handleSubmit} className={styles.formLetters}>
 
-            <input className={styles.letter} type="text" name="letter" maxLength={1} required />
+            <input className={styles.letter} type="text" name="letter" maxLength={1} required onChange={(e) => { setLetter(e.target.value)}} ref={lettersInputRef} value={letter}/>
 
             <div className={styles.box_button}>
-              <ButtonPrimary name="btnInstalJogo" value="Joga !" onclick={verifyLatter} />
+
+              <ButtonPrimary name="btnInstalJogo" value="Joga !" /> 
             </div>
 
         </form>
@@ -62,9 +92,15 @@ const Gamer = ({verifyLatter}) => {
           <p>Letras já Utilizadas:</p>
 
           <div>
-            <span>B,</span>
-            <span>C,</span>
-            <span>J</span>
+
+            {
+              worongLetters.map((l, i) => (
+
+                <span key={i}> {l}, </span>
+
+              ))
+            }
+            
           </div>
 
         </div>

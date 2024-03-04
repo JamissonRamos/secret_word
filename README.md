@@ -1,8 +1,8 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1=> Fazer que o texto de indicativo de tentativas mude, quando chegar a 2 fique de outra cor, comecei a fazer a alteração mais nao terminei;
+2=> Criar uma fluxo que verifica a palavra e não coloque uma palavra maior que a tela, e não repta a mesma palavra, quando for errada ou certa;
+3=> Coloca metodo para não deixa repetir a palavra uma vez seleciona;
+4=> Uma palavra não pode ter mais de 35 caracteres dentro do modulo de phone;
+5=> Mostra a palavra errada, ao fim do jogo;
+6=> Reiniciar o tentativas a cada palavra certa;

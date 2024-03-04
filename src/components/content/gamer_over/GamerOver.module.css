@@ -2,11 +2,11 @@
 {
     /* border: 1px solid red; */
 
-    width: 315px;
-    height: 335px;
+    width: 515px;
+    height: 435px;
 
     position: absolute;
-    left: calc(50% - 315px/2 - 0.5px);
+    left: calc(50% - 515px/2 - 0.5px);
     top: 93px;
 
     display: flex;
@@ -20,4 +20,41 @@
     background: var(--azul_700);
     box-shadow: var(--box_600);
 
+}
+
+.content_tex
+{
+    /* border: 1px solid red; */
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    padding: 1em 0;
+}
+
+.score
+{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.score span
+{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.box_button
+{
+    /* border: 1px solid red; */
+
+    width: 60%;
+    height: 42px;
+
+    
 }

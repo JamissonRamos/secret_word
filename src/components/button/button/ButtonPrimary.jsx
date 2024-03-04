@@ -5,7 +5,7 @@ const ButtonPrimary = ({name, value, onclick}) => {
     
     return (
         <>
-            <button className={styles.button} name={name} onClick={onclick}> { value }  </button>
+            <button className={styles.button} name={name} onClick={onclick}> <span>{ value }</span>  </button>
         </>
     )
 }
