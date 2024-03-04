@@ -133,9 +133,11 @@ useEffect(() => {
     clearLettersState()
 
     setGameStage(stage[2].name) // Pagina final, fim do jogo  
+
+    console.log(pickeWord)
   }
 
-},[guesses])
+},[guesses,pickeWord])
 
 //Monitorar quando a palavra for acertada
 useEffect(() => {
@@ -174,6 +176,7 @@ const retry = () => {
   setGameStage(stage[0].name)
 }
 
+console.log(pickeWord)
 
   return (
 
@@ -185,7 +188,7 @@ const retry = () => {
             
       {gameStage === "game" &&  <Gamer verifyLatter={verifyLatter} pickeWord={pickeWord} pickeCategory={pickeCategory} pickeLetters={pickeLetters} guessesLetters={guessesLetters} worongLetters={worongLetters} guesses={guesses} score={score} />}
 
-      {gameStage === "end" &&  <GamerOver retry={retry} score={score} />}
+      {gameStage === "end" &&  <GamerOver retry={retry} score={score} pickeWord={pickeWord}/>}
       
       <Footer />
 

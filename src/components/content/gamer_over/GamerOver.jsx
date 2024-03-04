@@ -3,7 +3,7 @@ import ButtonPrimary from "../../button/button/ButtonPrimary"
 import Title from "../../titles/title2/Title"
 import styles from "./GamerOver.module.css"
 
-const GamerOver = ({retry, score}) => {
+const GamerOver = ({retry, score, pickeWord}) => {
   return (
     <div className={styles.content} > 
     
@@ -11,6 +11,13 @@ const GamerOver = ({retry, score}) => {
           <div>
             <Title text="Fim do Jogo" />
           </div>
+
+          <div className={styles.score} >
+              <Title text="A palavra correta:" />
+              <span> {pickeWord} </span>
+          </div>
+
+
 
           <div className={styles.score} >
               <Title text="Sua pontuação foi:" />
