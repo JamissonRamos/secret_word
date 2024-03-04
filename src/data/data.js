@@ -1,4 +1,5 @@
-export const wordList = {
+export const wordList = 
+{
     carro: [
         "Motor", "Porta", "Capô", "Pneu", "Antena",
         "Freio", "Farol", "Vidro", "Cinto", "Óleo",

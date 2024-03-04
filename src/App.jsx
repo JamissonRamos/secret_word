@@ -34,37 +34,42 @@ function App() {
   const [guesses, setGuesses] = useState(guessesQtd) //Total de chances 
   const [score, setScore] = useState(0) //Total de pontos 
 
-
-
-
+  //Criando para atalizar aplicação diferente
+  const [guessesWords, setGuessesWords] = useState([]) //Palvras que foi adivinhadas pelo user  
   
 //Funções da aplicação 
-
 const pickeWordAndCategory = useCallback(() => {
-//Coloca toda a condição dentro de um loop, verificar se a palvra que pegou está dentro de um array que vai armazena plavras ja selecionada 
-// e não deixa coloca novamente
-// coloca no array de palavras ja usada, somente palavras acertada, para que possa mostra no final as palvras acertadas;
-
-
-
-  const categories = Object.keys(words)
-
-  const categoy = categories[Math.floor(Math.random() * Object.keys(categories).length)]
   
-  //Caso seja uma categoria com 2 ou mais letras fazer separação das palavras exm: jogoTabuleiro
-  let novaCategory = categoy
+  let wordFound     = false // Criando var para habilitar o while
+  let novaCategory  = ""    // Criando categoria da palavra
+  let word          = ""    //Pegar uma palavra da cetegoria
+    
+  while (!wordFound) {
 
-  if (/[A-Z]/.test(novaCategory))
-  {
-    novaCategory = novaCategory.replace(/([A-Z])/g, ' $1');
-  }
+      const categories  = Object.keys(words) //Passando um array das categorias
+      const category    = categories[Math.floor(Math.random() * Object.keys(categories).length)] // Selecionando uma categoria
+    
+      //Caso seja uma categoria com 2 ou mais palavras fazer separação das palavras exm: jogoTabuleiro
+      novaCategory = category
 
-  //Pegar uma palavra da cetegoria
-  const word = words[categoy][Math.floor(Math.random() * words[categoy].length)]
-  
+      if (/[A-Z]/.test(novaCategory))
+      {
+        novaCategory = novaCategory.replace(/([A-Z])/g, ' $1');
+      }
 
-  return {novaCategory, word}
-},[words])
+      //Pegar uma palavra da cetegoria
+      word = words[category][Math.floor(Math.random() * words[category].length)]
+      
+      // Verificar se a palavra já foi selecionada
+      if (!guessesWords.includes(word)) {
+        wordFound = true
+        break; // Sair do loop se a palavra estiver no array
+      }
+    }
+
+    return {novaCategory, word}
+
+},[words,guessesWords])
 
 //Iniciando o Gamer, Estdo inicial da aplicação
 const startGamer = useCallback(() => {
@@ -109,17 +114,14 @@ const verifyLatter = (letter) => {
       normalizedLetter
     ]) 
     setGuesses((actualGuesses) => actualGuesses - 1)
-    //Retirar a palvra que não foi acertada, a plvra vai ser coloca no array dentro da função de gerar palavra
-    //Chegando nesse ponto o array vai esta 
   }
-
-    //setGameStage(stage[2].name)
 }
 
 const clearLettersState = () => {
   setPickeLetters ([]);
   setGuessesLetters ([]);
   setWorongLetters ([]);
+  setGuessesWords ([]);
     
 }
 //Monitorar states resetar o jogo
@@ -143,16 +145,16 @@ useEffect(() => {
 
     //Vai conter todas as letras da palavra, retirando letras que esteja duplicadas
     const uniqueLetters = [... new Set(cleanedString)]
-    console.log(uniqueLetters)
-    console.log(guessesLetters)
 
     if( guessesLetters.length === uniqueLetters.length && guessesLetters.length >= 1){
         console.log("Entrou")
       //aumentando a pontuação do usuário
       setScore((actualScore) =>( actualScore += 100))
 
-      //Limpar os Stets
-      // clearLettersState()
+      setGuessesWords((actualGuessesWords) => [
+        ...actualGuessesWords,
+        pickeWord
+      ])
 
       //Resetar o jogo
       startGamer()
@@ -161,15 +163,7 @@ useEffect(() => {
 
   // guessesLetters => array que recebe todas as letras, mais não duplica letras
 
-},[guessesLetters, pickeLetters, startGamer])
-
-
-console.log(pickeWord)
-// console.log(pickeCategory)
-// console.log(pickeLetters)
-// console.log(guessesLetters)
-// console.log(worongLetters)
-
+},[guessesLetters, pickeLetters, startGamer, guessesWords, pickeWord])
 
 //Reiniciando o jogo
 const retry = () => {
@@ -179,7 +173,6 @@ const retry = () => {
 
   setGameStage(stage[0].name)
 }
-
 
 
   return (
