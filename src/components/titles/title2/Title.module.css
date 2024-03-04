@@ -1,8 +1,14 @@
 
-.title
+.title,
+.title_dwo
 {
     font-size: 1.6em;
     font-weight: bold;
     align-items: center;
     color: var(--verde_800);
+}
+
+.title_dwo
+{
+    color: var(--vermelho_800);
 }

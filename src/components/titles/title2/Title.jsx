@@ -2,12 +2,12 @@
 //Css
 import styles from "./Title.module.css";
 
-const Title = ({text}) => {
+const Title = ({text, color}) => {
     
     return (
 
         <>
-            <h2 className={styles.title} > {text} </h2>
+            <h2 className={color == 2 ? styles.title_dwo  : styles.title } > {text} </h2>
         </>
     )
 

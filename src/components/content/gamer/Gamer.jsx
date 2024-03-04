@@ -51,7 +51,7 @@ const Gamer = ({verifyLatter, pickeCategory, pickeLetters, guessesLetters, woron
       
       <div>
         {
-          guesses <= 1 ? (<Title text={`Você tem ${guesses}  tentativas`} />) : (<Title text={`Você tem ${guesses}  tentativas` } />)
+          guesses <= 1 ? (<Title text={`Você tem ${guesses}  tentativas`} color={2} />) : (<Title text={`Você tem ${guesses}  tentativas` } color={1}/>)
         }
         
       </div>
