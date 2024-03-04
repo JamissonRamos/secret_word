@@ -13,3 +13,5 @@
 Documentação 
 
 . O jogo avisa quando usuário somente tem uma alternativa, indica mudando a cor do texto "Você tem xx tentativas",  fica acima do campo onde se inserir a letra a ser adivinhada;
+
+. Ao acerta a palavra a mesma é armazenada e ao fim do jogo o jogado pode visualizar quais palavras foram adivinhadas;
