@@ -1,5 +1,6 @@
 
 import ButtonPrimary from "../../button/button/ButtonPrimary"
+import ButtonSecond from "../../button/button/ButtonSecond"
 import Title from "../../titles/title2/Title"
 import styles from "./GamerOver.module.css"
 
@@ -25,8 +26,16 @@ const GamerOver = ({retry, score, pickeWord}) => {
           </div>
       </dir>
 
-      <div className={styles.box_button}>
-        <ButtonPrimary name="btnInstalJogo" value="Reiniciar Jogo" onclick={retry}/>
+      <div className={styles.box_buttons}>
+
+        <div className={styles.box_button}>
+          <ButtonPrimary name="btnInstalJogo" value="Reiniciar Jogo" onclick={retry}/>
+        </div>
+
+        <div className={styles.box_button}>
+          <ButtonSecond name="btnInstalJogo" value="Resultado do Jogo" onclick={retry}/>
+        </div>
+        
       </div>
     
     

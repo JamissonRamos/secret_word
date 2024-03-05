@@ -11,7 +11,8 @@
     justify-content: center;
     gap: 10px;
 
-    background: var(--roxo_800);
+    background: var(--branco_800);
+    
     border-radius: 8px;
 
     transition: all 0.2s;
@@ -21,10 +22,17 @@
 
 .button:hover
 {
+    color: var(--branco_800);
     background-color: var(--roxo_810);
 }
 
 .button span
 {
+    
     font-size: 1em;
+    color: var(--roxo_800);
+    
+    
 }
+
+
