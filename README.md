@@ -6,6 +6,7 @@
 4=> Uma palavra não pode ter mais de 35 caracteres dentro do modulo de phone;
 5=> OK - Mostra a palavra errada, ao fim do jogo;
 6=> OK - Reiniciar as tentativas a cada palavra certa;
+7=> A regra de não repetir a palavra não esta funcionado 1000% pois ela repetiu a palavra de pop; 
 
 
 

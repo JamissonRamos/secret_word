@@ -12,6 +12,7 @@ import StartScreen from './components/content/start_screen/StartScreen'
 import Gamer from './components/content/gamer/Gamer'
 import GamerOver from './components/content/gamer_over/GamerOver'
 import {wordList} from "./data/data"
+import MatchResult from './components/content/match_result/MatchResult'
 
 const guessesQtd = 5
 
@@ -19,7 +20,8 @@ const stage = [
 
   {id: 1, name: "start"},
   {id: 2, name: "game"},
-  {id: 3, name: "end"}
+  {id: 3, name: "end"},
+  {id: 4, name: "result"}
 ]
 
 function App() {
@@ -119,7 +121,6 @@ const clearLettersState = () => {
   setPickeLetters ([]);
   setGuessesLetters ([]);
   setWorongLetters ([]);
-  setGuessesWords ([]);
     
 }
 //Monitorar states resetar o jogo
@@ -157,7 +158,6 @@ useEffect(() => {
 
       setGuesses(guessesQtd) 
 
-
       //Resetar o jogo
       startGamer()
 
@@ -167,6 +167,12 @@ useEffect(() => {
 
 },[guessesLetters, pickeLetters, startGamer, guessesWords, pickeWord])
 
+
+const retryResult = () => {
+
+  retry()
+  setGuessesWords ([]);
+}
 //Reiniciando o jogo
 const retry = () => {
 
@@ -176,7 +182,18 @@ const retry = () => {
   setGameStage(stage[0].name)
 }
 
-//console.log(pickeWord)
+console.log(pickeWord)
+// console.log(guessesWords)
+
+const showResul = () => {
+
+
+  setGameStage(stage[3].name)
+
+  // console.log(pickeWord)
+console.log(guessesWords)
+
+}
 
   return (
 
@@ -188,7 +205,9 @@ const retry = () => {
             
       {gameStage === "game" &&  <Gamer verifyLatter={verifyLatter} pickeWord={pickeWord} pickeCategory={pickeCategory} pickeLetters={pickeLetters} guessesLetters={guessesLetters} worongLetters={worongLetters} guesses={guesses} score={score} />}
 
-      {gameStage === "end" &&  <GamerOver retry={retry} score={score} pickeWord={pickeWord}/>}
+      {gameStage === "end" &&  <GamerOver retry={retry} showResul={showResul} score={score} pickeWord={pickeWord}/>}
+      
+      {gameStage === "result" &&  <MatchResult  retry={retryResult} guessesWords={guessesWords} guessesQtd={guessesWords.length} score={score} />}
       
       <Footer />
 

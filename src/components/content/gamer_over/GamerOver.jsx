@@ -4,7 +4,7 @@ import ButtonSecond from "../../button/button/ButtonSecond"
 import Title from "../../titles/title2/Title"
 import styles from "./GamerOver.module.css"
 
-const GamerOver = ({retry, score, pickeWord}) => {
+const GamerOver = ({retry, showResul, score, pickeWord}) => {
   return (
     <div className={styles.content} > 
     
@@ -33,7 +33,7 @@ const GamerOver = ({retry, score, pickeWord}) => {
         </div>
 
         <div className={styles.box_button}>
-          <ButtonSecond name="btnInstalJogo" value="Resultado do Jogo" onclick={retry}/>
+          <ButtonSecond name="btnResultJogo" value="Resultado do Jogo" onclick={showResul}/>
         </div>
         
       </div>
