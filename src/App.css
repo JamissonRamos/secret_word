@@ -14,4 +14,18 @@
     text-align: center;
 }
 
+/* Responsividade */
 
+@media screen and (max-width: 1023px) 
+{
+    /* Estilos para telas menores ou iguais a 1023px */
+
+    .App
+    {
+        /* border: 1px solid red; */
+        
+        display: block;
+    }
+
+    
+}

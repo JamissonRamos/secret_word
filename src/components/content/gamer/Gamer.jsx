@@ -55,6 +55,7 @@ const Gamer = ({verifyLatter, pickeCategory, pickeLetters, guessesLetters, woron
         }
         
       </div>
+      
       <div className={styles.wordContainer}>
 
         {
@@ -64,7 +65,6 @@ const Gamer = ({verifyLatter, pickeCategory, pickeLetters, guessesLetters, woron
 
           ))
         }
-       
         
         
   

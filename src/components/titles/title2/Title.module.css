@@ -12,3 +12,16 @@
 {
     color: var(--vermelho_800);
 }
+
+/* Responsividade */
+
+@media screen and (max-width: 1023px) 
+{
+    /* Estilos para telas menores ou iguais a 1023px */
+
+    .title,
+    .title_dwo{
+        font-size: 1.1em;
+
+    }
+}
