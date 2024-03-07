@@ -1,22 +1,22 @@
-# React + Vite
+# Tecnologias
+* React 
+* Vite
+* firebase
+* Google fonts
+* git and gitHub
+  
+# Documentação do Jogo de Palavras
 
-1=> ok - Fazer que o texto de indicativo de tentativas mude, quando chegar a 2 fique de outra cor, comecei a fazer a alteração mais nao terminei;
-2=> OK - Não deixa repeti a mesma palavra, quando for acertada;
-3=> OK - Coloca metodo para não deixa repetir a palavra uma vez seleciona;
-4=> Uma palavra não pode ter mais de 35 caracteres dentro do modulo de phone;
-5=> OK - Mostra a palavra errada, ao fim do jogo;
-6=> OK - Reiniciar as tentativas a cada palavra certa;
-7=> A regra de não repetir a palavra não esta funcionado 1000% pois ela repetiu a palavra de pop; 
+## Indicação de Única Alternativa
+O jogo fornecerá um aviso quando o usuário tiver apenas uma alternativa disponível. Essa indicação será feita alterando a cor do texto exibindo o número de tentativas restantes. Este texto estará localizado acima do campo onde o jogador insere a letra a ser adivinhada. A mudança de cor será um sinal visual para alertar o usuário sobre a situação crítica de ter apenas uma tentativa restante.
+
+## Armazenamento de Palavras Adivinhadas
+Quando o jogador acertar uma palavra, a palavra correta será armazenada. Ao final do jogo, o jogador terá a capacidade de visualizar todas as palavras que foram corretamente adivinhadas durante a sessão de jogo. Isso proporciona uma experiência mais envolvente e permite que o jogador reveja seu desempenho.
+
+## Revelação da Palavra Não Adivinhada
+Ao concluir o jogo, a palavra que não foi adivinhada será exibida no final. Isso oferece uma oportunidade para o jogador aprender com as palavras que não conseguiu adivinhar, incentivando-o a melhorar em futuras rodadas.
+
+## Reinício das Tentativas ao Acertar a Palavra
+Quando o jogador acertar a palavra correta, o número de tentativas restantes será reiniciado, voltando ao valor inicial. Isso proporciona um novo desafio ao jogador, incentivando-o a continuar jogando e aprimorando suas habilidades de adivinhação.
 
 
-
-
-Documentação 
-
-. O jogo avisa quando usuário somente tem uma alternativa, indica mudando a cor do texto "Você tem xx tentativas",  fica acima do campo onde se inserir a letra a ser adivinhada;
-
-. Ao acerta a palavra a mesma é armazenada e ao fim do jogo o jogado pode visualizar quais palavras foram adivinhadas;
-
-. Ao fim do jogo a palavra que não foi adivinhada sera mostrada no final;
-
-. Ao acerta a palavra o valor das tentativas de acerto vai ser reiniciado, volta ao valor inicial;
