@@ -18,9 +18,9 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.list_social}>
-                    <FaInstagram className={styles.icone}/>
-                    <FaGithub className={styles.icone}/>
-                    <MdOutlineMailOutline className={styles.icone}/>
+                    <a href="https://www.instagram.com/jamissonliraramos/" target="_blank"> <FaInstagram className={styles.icone}/> </a>
+
+                    <a href="https://github.com/JamissonRamos?rel=outbound" target="_blank">  <FaGithub className={styles.icone}/> </a>
                 </div>
 
             </div>
