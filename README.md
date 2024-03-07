@@ -4,6 +4,7 @@
 * firebase
 * Google fonts
 * git and gitHub
+* figma
   
 # Documentação do Jogo de Palavras
 
