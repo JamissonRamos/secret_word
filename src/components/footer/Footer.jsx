@@ -1,6 +1,5 @@
 
 import { FaGithub, FaInstagram } from "react-icons/fa";
-import { MdOutlineMailOutline } from "react-icons/md";
 
 //Css
 import styles from "./Footer.module.css"
